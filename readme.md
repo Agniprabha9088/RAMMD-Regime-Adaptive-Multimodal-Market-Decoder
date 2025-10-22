@@ -5,12 +5,12 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch 2.0+](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Paper](https://img.shields.io/badge/Paper-PDF-green.svg)]( )
+[![Paper](https://img.shields.io/badge/Paper-PDF-green.svg)](https://zenodo.org/records/17418880)
 
 
 **Official PyTorch Implementation**
 
-[📄 Paper]( ) | [🚀 Quick Start](#-quick-start) | [📊 Benchmarks](#-performance-benchmarks) 
+[📄 Paper](https://zenodo.org/records/17418880) | [🚀 Quick Start](#-quick-start) | [📊 Benchmarks](#-performance-benchmarks) 
 
 </div>
 
@@ -671,14 +671,13 @@ model:
 If you use RAMMD in your research, please cite:
 
 ```bibtex
-@article{chakraborty2025rammd,
-  title={RAMMD: Regime-Adaptive Multimodal Market Decoder with Mixture-of-Experts, Cross-Modal Contrastive Learning, and Graph-Structured Attention},
-  author={Chakraborty, Agniprabha and Jana, Anindya and Das, Manideep},
-  journal={IEEE Transactions on Neural Networks and Learning Systems},
-  year={2025},
-  publisher={IEEE},
-  doi={10.1109/TNNLS.2025.xxxxx},
-  url={https://arxiv.org/abs/2025.12345}
+@misc{chakraborty2025rammd,
+  author       = {Chakraborty, Agniprabha and Jana, Anindya and Das, Manideep},
+  title        = {RAMMD: Regime-Adaptive Multimodal Market Decoder with Mixture-of-Experts, Cross-Modal Contrastive Learning, and Graph-Structured Attention},
+  year         = {2025},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.17418880},
+  url          = {https://zenodo.org/records/17418880}
 }
 ```
 
@@ -686,7 +685,7 @@ If you use RAMMD in your research, please cite:
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+We welcome contributions! Feel free to reach out to us.
 
 ### **Development Setup**
 
@@ -884,7 +883,5 @@ A: Yes! RAMMD includes SHAP-based explainability to understand prediction driver
 **Made with ❤️ by our team**
 
 **© 2025 RAMMD Project - Licensed under GPL-3.0**
-
-[⬆ Back to Top](#rammd-regime-adaptive-multimodal-market-decoder)
 
 </div>
