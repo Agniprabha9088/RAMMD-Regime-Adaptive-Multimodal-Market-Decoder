@@ -762,7 +762,7 @@ If you wish to use RAMMD in proprietary software without GPL restrictions, pleas
 📧 Email: [agniprabhac.power.ug@jadavpuruniversity.in](mailto:agniprabhac.power.ug@jadavpuruniversity.in)  
 🏛️ Affiliation: Department of Power Engineering, Jadavpur University  
 🐙 GitHub: [@Agniprabha9088](https://github.com/Agniprabha9088)  
-🔗 LinkedIn: [Agniprabha Chakraborty](https://linkedin.com/in/yourprofile)
+🔗 LinkedIn: [Agniprabha Chakraborty](https://www.linkedin.com/in/agniprabha-chakraborty)
 
 **Co-Author:**
 - Daipayan Dubey: [dubeydaipayan@gmail.com](mailto:dubeydaipayan@gmail.com)
