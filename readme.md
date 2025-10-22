@@ -753,8 +753,6 @@ If you wish to use RAMMD in proprietary software without GPL restrictions, pleas
 - **Frameworks:**
   - PyTorch, Hugging Face Transformers, PyTorch Geometric
 
-- **Funding:**
-  - This work was supported by Jadavpur University Research Grant (JU/RG/2025/xxx)
 
 ---
 
