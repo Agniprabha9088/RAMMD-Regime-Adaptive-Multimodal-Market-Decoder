@@ -1,0 +1,106 @@
+model:
+  name: "RAMMD"
+  num_regimes: 4
+  num_assets: 1245
+  device: "cuda"
+  
+  regime_detection:
+    num_regimes: 4
+    feature_dim: 32
+    covariance_type: "full"
+    hmm_smoothing: true
+    drift_detection: true
+    drift_detectors: ["ADWIN", "KSWIN", "PageHinkley"]
+    ensemble_threshold: 2
+  
+  encoders:
+    price:
+      type: "PatchTST"
+      window_size: 252
+      input_channels: 23
+      patch_length: 16
+      stride: 16
+      d_model: 512
+      n_heads: 8
+      n_layers: 4
+      dropout: 0.1
+      pretrained_path: "checkpoints/pretrained/patchtst"
+      
+    news:
+      type: "FinBERT"
+      model_name: "yiyanghkust/finbert-tone"
+      pretrained_path: "checkpoints/pretrained/finbert_tone"
+      max_length: 512
+      d_model: 768
+      aggregation_window: 5
+      recency_weight_decay: 0.95
+      
+    social:
+      type: "DistilBERT"
+      model_name: "distilbert-base-uncased"
+      pretrained_path: "checkpoints/pretrained/distilbert"
+      max_length: 280
+      d_model: 768
+      author_weighting: true
+      
+    macro:
+      type: "MLP"
+      input_dim: 24
+      hidden_dims: [128, 256, 512]
+      output_dim: 256
+      dropout: 0.1
+      batch_norm: true
+  
+  moe:
+    num_experts_per_modality: 4
+    hidden_dim: 512
+    output_dim: 512
+    top_k: 2
+    group_attention: true
+    group_attention_heads: 4
+    expert_dropout: 0.1
+    load_balancing_loss: true
+    
+  contrastive:
+    shared_dim: 256
+    private_dim: 256
+    temperature: 0.07
+    lambda_private: 0.5
+    lambda_temporal: 0.3
+    lambda_ortho: 1.0
+    regime_aware_sampling: true
+    hard_negative_mining: true
+    
+  gnn:
+    type: "TemporalGAT"
+    input_dim: 2048
+    hidden_dim: 512
+    output_dim: 512
+    n_layers: 2
+    n_heads: 4
+    dropout: 0.1
+    edge_threshold_corr: 0.3
+    edge_threshold_spillover: 0.15
+    hierarchical_pooling: true
+    temporal_encoding: true
+    
+  wavelet:
+    wavelet_type: "db8"
+    decomposition_levels: 5
+    attention_heads: 4
+    regime_dependent: true
+    scale_specific_projection: true
+    
+  fusion:
+    type: "regime_gated"
+    hidden_dim: 1024
+    output_dim: 512
+    dropout: 0.2
+    modality_dropout: 0.1
+    
+  prediction:
+    regression_head: true
+    classification_head: true
+    volatility_head: true
+    regime_head: true
+    shared_hidden: 256

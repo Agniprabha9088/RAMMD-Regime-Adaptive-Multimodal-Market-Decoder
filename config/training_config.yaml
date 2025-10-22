@@ -1,0 +1,72 @@
+training:
+  experiment_name: "rammd_production"
+  
+  # Optimization
+  optimizer: "AdamW"
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  betas: [0.9, 0.999]
+  eps: 1.0e-8
+  
+  # Learning Rate Schedule
+  lr_scheduler: "cosine"
+  warmup_epochs: 10
+  lr_max: 0.0003
+  lr_min: 1.0e-6
+  
+  # Training Parameters
+  batch_size: 64
+  num_epochs: 200
+  gradient_clip: 1.0
+  early_stopping_patience: 30
+  accumulation_steps: 1
+  
+  # Mixed Precision
+  mixed_precision: true
+  
+  # Loss Weights (from paper)
+  loss_weights:
+    regression: 1.0
+    classification: 2.0
+    volatility: 0.5
+    regime: 0.3
+    contrastive: 0.8
+    regularization: 0.001
+  
+  # Contrastive Pre-training
+  pretrain_contrastive: true
+  pretrain_epochs: 50
+  pretrain_batch_size: 128
+  
+  # Drift Detection & Adaptation
+  drift_detection:
+    enabled: true
+    check_interval: 100
+    retrain_window: 1000
+    finetune_window: 500
+    adaptation_lr: 0.0001
+  
+  # Data Split
+  train_start: "2008-01-01"
+  train_end: "2019-12-31"
+  val_start: "2020-01-01"
+  val_end: "2021-12-31"
+  test_start: "2022-01-01"
+  test_end: "2025-10-22"
+  
+  # Walk-Forward Validation
+  walk_forward: true
+  retraining_frequency: 90
+  
+  # Logging
+  log_interval: 10
+  save_checkpoint_every: 5
+  use_wandb: true
+  wandb_project: "RAMMD"
+  use_tensorboard: true
+
+# Hardware
+device: "cuda"
+num_workers: 8
+pin_memory: true
+seed: 42

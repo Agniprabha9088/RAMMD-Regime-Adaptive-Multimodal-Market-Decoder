@@ -1,0 +1,2 @@
+# This file preserves the checkpoints/ directory in Git
+# Actual model checkpoints will be downloaded automatically

@@ -1,0 +1,69 @@
+data:
+  # Asset Universe
+  assets:
+    - SPY
+    - QQQ
+    - AAPL
+    - GOOGL
+    - MSFT
+    - TSLA
+    - JPM
+    - BAC
+    - GS
+    - WMT
+  
+  # Data Sources
+  sources:
+    price: "yfinance"
+    news: "newsapi"
+    social: "twitter_api"
+    macro: "fred"
+  
+  # API Keys (set in .env file)
+  api_keys:
+    newsapi: "${NEWSAPI_KEY}"
+    alpha_vantage: "${ALPHA_VANTAGE_KEY}"
+    finnhub: "${FINNHUB_KEY}"
+  
+  # Technical Indicators
+  indicators:
+    - SMA_5
+    - SMA_10
+    - SMA_20
+    - SMA_50
+    - SMA_200
+    - EMA_12
+    - EMA_26
+    - RSI_14
+    - MACD
+    - MACD_signal
+    - MACD_hist
+    - BB_upper
+    - BB_middle
+    - BB_lower
+    - ATR_14
+    - ADX_14
+    - Stochastic_K
+    - Stochastic_D
+    - OBV
+  
+  # Macroeconomic Indicators
+  macro_indicators:
+    - GDP_GROWTH
+    - UNEMPLOYMENT_RATE
+    - CPI
+    - FEDERAL_FUNDS_RATE
+    - VIX
+    - TREASURY_10Y
+    - TREASURY_2Y
+    - USD_INDEX
+    - OIL_PRICE
+    - GOLD_PRICE
+  
+  # Preprocessing
+  preprocess:
+    normalize: true
+    normalization_method: "robust"
+    handle_missing: "forward_fill"
+    outlier_threshold: 3.0
+    min_history: 252
