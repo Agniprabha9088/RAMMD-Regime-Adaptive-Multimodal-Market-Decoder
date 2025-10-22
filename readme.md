@@ -816,7 +816,7 @@ If you wish to use RAMMD in proprietary software without GPL restrictions, pleas
 ### **Reporting Vulnerabilities**
 
 If you discover a security vulnerability, please email:
-📧 whehhs@gmail.com
+📧 agniprovo9088@gmail.com
 
 ---
 
