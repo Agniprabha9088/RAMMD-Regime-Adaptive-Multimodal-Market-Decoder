@@ -672,7 +672,7 @@ If you use RAMMD in your research, please cite:
 
 ```bibtex
 @misc{chakraborty2025rammd,
-  author       = {Chakraborty, Agniprabha and Jana, Anindya and Das, Manideep},
+  author       = {Chakraborty, Agniprabha and Dubey, Daipayan},
   title        = {RAMMD: Regime-Adaptive Multimodal Market Decoder with Mixture-of-Experts, Cross-Modal Contrastive Learning, and Graph-Structured Attention},
   year         = {2025},
   publisher    = {Zenodo},
