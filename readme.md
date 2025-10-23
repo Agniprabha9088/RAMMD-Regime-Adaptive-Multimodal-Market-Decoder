@@ -48,10 +48,9 @@
 
 **Title:** *RAMMD: Regime-Adaptive Multimodal Market Decoder with Mixture-of-Experts, Cross-Modal Contrastive Learning, and Graph-Structured Attention for Dynamically Weighted Prediction of Financial Asset Prices*
 
-**Authors:** Agniprabha Chakraborty¹, Anindya Jana², Manideep Das³  
-**Affiliation:** Jadavpur University, West Bengal, India  
-**Conference:** IEEE Transactions on Neural Networks and Learning Systems (2025)
-
+**Authors:** Agniprabha Chakraborty¹, Daipayan Dubey²
+**Affiliation:** Department of Power Engineering, Jadavpur University¹, West Bengal, India  
+Professional Financial Analyst², West Bengal, India
 
 
 ---
